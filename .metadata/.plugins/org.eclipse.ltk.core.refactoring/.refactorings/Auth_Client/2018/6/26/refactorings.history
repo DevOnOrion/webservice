@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;org.crazyit.cxf.ws.auth&apos; to &apos;Call_CXFSpring/src&apos;&#x0D;&#x0A;- Original project: &apos;Auth_Client&apos;&#x0D;&#x0A;- Destination element: &apos;Call_CXFSpring/src&apos;&#x0D;&#x0A;- Original element: &apos;Auth_Client/src/org.crazyit.cxf.ws.auth&apos;" description="Copy package" destination="=Call_CXFSpring/src" element1="/src&lt;org.crazyit.cxf.ws.auth" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1529843692782" version="1.0"/>
+</session>

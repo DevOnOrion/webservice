@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:jaxws="http://cxf.apache.org/jaxws"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:p="http://www.springframework.org/schema/p"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	
+	<!-- Web应用的类加载路径有两类
+	A.WEB-INF/classes目录。
+	B.WEB-INF/lib目录下。
+	 -->
+	<import resource="classpath:META-INF/cxf/cxf.xml"/>
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml"/>
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+
+	<bean id="userService" class="org.fkjava.cxf.service.UserServiceImpl" />
+	<!-- implementor指定webservice的服务提供者。支持两种形式 
+		A.直接指定服务器提供者的类名
+		B.设置为容器中的一个bean.要在bean的id前加上#号
+	 -->
+	 <bean id="helloWorldWs" class="org.fkjava.cxf.ws.impl.HelloWorldWs"
+	 	p:us-ref="userService" />
+	<jaxws:endpoint 
+		implementor="#helloWorldWs" 
+		address="/fkjava" >
+		<!-- 添加了两个In拦截器 -->
+		<jaxws:inInterceptors>
+			<bean class="org.apache.cxf.interceptor.LoggingInInterceptor" />
+			<bean class="org.fkjava.cxf.ws.auth.AuthInterceptor" />
+		</jaxws:inInterceptors>
+	</jaxws:endpoint>
+
+</beans>

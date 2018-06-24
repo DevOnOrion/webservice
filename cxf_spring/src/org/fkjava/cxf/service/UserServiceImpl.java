@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.fkjava.cxf.domain.Cat;
 import org.fkjava.cxf.domain.User;
+import org.springframework.stereotype.Service;
 
 public class UserServiceImpl implements UserService {
 

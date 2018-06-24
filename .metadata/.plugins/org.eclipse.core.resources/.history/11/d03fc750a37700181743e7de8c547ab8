@@ -1,0 +1,24 @@
+package lee;
+
+import java.util.List;
+
+import org.fkjava.cxf.ws.GetAllCatsResponse.Return;
+import org.fkjava.cxf.ws.GetAllCatsResponse.Return.Entry;
+import org.fkjava.cxf.ws.HelloWorld;
+import org.fkjava.cxf.ws.impl.HelloWorldWs;
+
+public class ClientMain {
+
+	public static void main(String[] args) {
+
+		HelloWorldWs factory = new HelloWorldWs();
+		HelloWorld hw = factory.getHelloWorldWsPort();
+		System.out.println(hw.sayHi("豬八戒"));
+		
+		Return cats = hw.getAllCats();
+		for (Entry entry : cats.getEntry()) {
+			System.out.println(entry.getKey()+entry.getValue());
+		} 
+	}
+
+}

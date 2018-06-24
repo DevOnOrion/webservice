@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:jaxws="http://cxf.apache.org/jaxws"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	
+	<!-- Web应用的类加载路径有两类
+	A.WEB-INF/classes目录。
+	B.WEB-INF/lib目录下。
+	 -->
+	<import resource="META-INF/cxf/cxf.xml"/>
+	<import resource="META-INF/cxf/cxf-soap.xml"/>
+	<import resource="META-INF/cxf/cxf-servlet.xml"/>
+
+	<bean id="userService" class="org.fkjava.cxf.service.UserServiceImpl" />
+	<!-- implementor指定webservice的服务提供者。支持两种形式 
+		A.直接指定服务器提供者的类名
+		B.设置为容器中的一个bean
+	 -->
+	<jaxws:endpoint 
+		implementor="org.fkjava.cxf.ws.impl.HelloWorldWs" 
+		address="/fkjava" />
+
+</beans>
