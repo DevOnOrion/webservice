@@ -1,0 +1,34 @@
+package lee;
+
+import java.util.List;
+
+import org.fkjava.cxf.ws.Cat;
+import org.fkjava.cxf.ws.GetAllCatsResponse.Return;
+import org.fkjava.cxf.ws.GetAllCatsResponse.Return.Entry;
+import org.fkjava.cxf.ws.HelloWorld;
+import org.fkjava.cxf.ws.User;
+import org.fkjava.cxf.ws.impl.HelloWorldWs;
+
+public class ClientMain {
+
+	public static void main(String[] args) throws Exception {
+		HelloWorldWs factory = new HelloWorldWs();
+		HelloWorld hw = factory.getHelloWorldWsPort();
+		
+		System.out.println(hw.sayHi("孙悟空"));
+		Class<?> forName = Class.forName("org.fkjava.cxf.ws.User");
+		User user = (User) forName.newInstance();
+		user.setId(30);
+		user.setName("sun");
+		user.setPassword("3322");
+		List<Cat> list = hw.getCatsByUser(user);
+		for (Cat cat : list) {
+			System.out.println(cat.getName());
+		}
+		Return allCats = hw.getAllCats();
+		List<Entry> list2 = allCats.getEntry();
+		for (Entry entry : list2) {
+			System.out.println(entry.getKey()+entry.getValue().getName());
+		}
+	}
+}

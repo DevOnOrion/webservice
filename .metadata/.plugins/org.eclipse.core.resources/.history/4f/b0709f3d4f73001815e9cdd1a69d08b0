@@ -1,0 +1,11 @@
+package lee;
+
+import org.fkjava.cxf.ws.impl.HelloWorldWs;
+
+public class ClientMain {
+
+	public static void main(String[] args) {
+		HelloWorldWs factory = new HelloWorldWs();
+		factory.getHelloWorldWsPort();
+	}
+}

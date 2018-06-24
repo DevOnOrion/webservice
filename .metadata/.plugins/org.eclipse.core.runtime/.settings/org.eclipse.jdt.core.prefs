@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=E\:/Software/Java/jdk1.7.0_80/jre/lib/rt.jar
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=E\:/Software/Java/jdk1.7.0_80/src.zip
+org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
+org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
+org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
+org.eclipse.jdt.core.compiler.compliance=1.7
+org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
+org.eclipse.jdt.core.compiler.source=1.7
+org.eclipse.jdt.core.userLibrary.CXF-2.5.9=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="2">\r\n\t<archive path\="E\:/apache-cxf-2.5.9/lib/jetty-continuation-7.5.4.v20111024.jar"/>\r\n\t<archive path\="E\:/apache-cxf-2.5.9/lib/jetty-http-7.5.4.v20111024.jar"/>\r\n\t<archive path\="E\:/apache-cxf-2.5.9/lib/jetty-io-7.5.4.v20111024.jar"/>\r\n\t<archive path\="E\:/apache-cxf-2.5.9/lib/jetty-security-7.5.4.v20111024.jar"/>\r\n\t<archive path\="E\:/apache-cxf-2.5.9/lib/jetty-server-7.5.4.v20111024.jar"/>\r\n\t<archive path\="E\:/apache-cxf-2.5.9/lib/jetty-util-7.5.4.v20111024.jar"/>\r\n\t<archive path\="E\:/apache-cxf-2.5.9/lib/geronimo-servlet_2.5_spec-1.1.2.jar"/>\r\n\t<archive path\="E\:/apache-cxf-2.5.9/lib/asm-3.3.1.jar"/>\r\n\t<archive path\="E\:/apache-cxf-2.5.9/lib/commons-logging-1.1.1.jar"/>\r\n\t<archive path\="E\:/apache-cxf-2.5.9/lib/neethi-3.0.2.jar"/>\r\n\t<archive path\="E\:/apache-cxf-2.5.9/lib/wsdl4j-1.6.2.jar"/>\r\n\t<archive path\="E\:/apache-cxf-2.5.9/lib/xmlschema-core-2.0.3.jar"/>\r\n\t<archive path\="E\:/apache-cxf-2.5.9/lib/cxf-2.5.9.jar"/>\r\n</userlibrary>\r\n

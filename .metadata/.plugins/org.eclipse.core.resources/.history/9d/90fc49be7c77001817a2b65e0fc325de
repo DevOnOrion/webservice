@@ -1,0 +1,16 @@
+package org.crazyit.cxf.ws.auth;
+
+import org.apache.cxf.binding.soap.SoapMessage;
+import org.apache.cxf.interceptor.Fault;
+import org.apache.cxf.phase.AbstractPhaseInterceptor;
+
+public class AddHeadersInterceptor extends AbstractPhaseInterceptor<SoapMessage> {
+
+	@Override
+	public void handleMessage(SoapMessage arg0) throws Fault {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

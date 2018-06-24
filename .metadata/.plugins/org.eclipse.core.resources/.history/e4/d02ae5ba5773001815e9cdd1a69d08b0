@@ -1,0 +1,18 @@
+package lee;
+
+import org.fkjava.cxf.ws.HelloWorld;
+import org.fkjava.cxf.ws.User;
+import org.fkjava.cxf.ws.impl.HelloWorldWs;
+
+public class ClientMain {
+
+	public static void main(String[] args) {
+		HelloWorldWs factory = new HelloWorldWs();
+		HelloWorld hw = factory.getHelloWorldWsPort();
+		System.out.println(hw.sayHi("孙悟空"));
+		Class.forName(org.fkjava.cxf.ws.User);
+		us
+		
+		hw.getCatsByUser();
+	}
+}

@@ -1,0 +1,36 @@
+Inbound Message
+----------------------------
+ID: 1
+Address: http://127.0.0.1:9999/fkjava?wsdl
+Http-Method: GET
+Content-Type: 
+Headers: {Accept=[text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2], connection=[keep-alive], Content-Type=[null], Host=[127.0.0.1:9999], User-Agent=[Java/1.7.0_80]}
+--------------------------------------
+Inbound Message
+----------------------------
+ID: 2
+Address: http://127.0.0.1:9999/fkjava?wsdl=HelloWorld.wsdl
+Http-Method: GET
+Content-Type: 
+Headers: {Accept=[text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2], connection=[keep-alive], Content-Type=[null], Host=[127.0.0.1:9999], User-Agent=[Java/1.7.0_80]}
+--------------------------------------
+Inbound Message
+----------------------------
+ID: 3
+Address: http://127.0.0.1:9999/fkjava
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml; charset=UTF-8
+Headers: {Accept=[text/xml, multipart/related], connection=[keep-alive], Content-Length=[258], content-type=[text/xml; charset=UTF-8], Host=[127.0.0.1:9999], SOAPAction=[""], User-Agent=[JAX-WS RI 2.2.4-b01]}
+Payload: <?xml version="1.0" ?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><ns2:getCatsByUser xmlns:ns2="http://ws.cxf.fkjava.org/"><arg0><id>30</id><name>sun</name><password>3322</password></arg0></ns2:getCatsByUser></S:Body></S:Envelope>
+--------------------------------------
+Inbound Message
+----------------------------
+ID: 4
+Address: http://127.0.0.1:9999/fkjava
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml; charset=UTF-8
+Headers: {Accept=[text/xml, multipart/related], connection=[keep-alive], Content-Length=[171], content-type=[text/xml; charset=UTF-8], Host=[127.0.0.1:9999], SOAPAction=[""], User-Agent=[JAX-WS RI 2.2.4-b01]}
+Payload: <?xml version="1.0" ?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><ns2:getAllCats xmlns:ns2="http://ws.cxf.fkjava.org/"/></S:Body></S:Envelope>
+--------------------------------------
