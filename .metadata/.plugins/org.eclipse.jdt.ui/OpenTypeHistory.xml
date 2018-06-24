@@ -3,4 +3,5 @@
 <typeInfo handle="=WS_Server/src&lt;org.fkjava.cxf.ws{HelloWorld.java[HelloWorld" modifiers="513" timestamp="1529390274353"/>
 <typeInfo handle="=Auth_Server/E:\/apache-cxf-2.5.9\/lib\/cxf-2.5.9.jar&lt;org.apache.cxf.phase(AbstractPhaseInterceptor.class[AbstractPhaseInterceptor" modifiers="1057" timestamp="1359363140000"/>
 <typeInfo handle="=cxf_spring/D:\/tianti\/workspace_tianti\/cxf_spring\/WebContent\/WEB-INF\/lib\/cxf-2.5.9.jar&lt;org.apache.cxf.transport.servlet(CXFServlet.class[CXFServlet" modifiers="33" timestamp="1529827109133"/>
+<typeInfo handle="=cxf_spring/D:\/tianti\/workspace_tianti\/cxf_spring\/WebContent\/WEB-INF\/lib\/cxf-2.5.9.jar&lt;org.apache.cxf.interceptor(LoggingInInterceptor.class[LoggingInInterceptor" modifiers="33" timestamp="1529827109133"/>
 </typeInfoHistroy>

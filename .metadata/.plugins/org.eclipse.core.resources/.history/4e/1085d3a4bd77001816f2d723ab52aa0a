@@ -1,0 +1,28 @@
+package org.crazyit.app.action;
+
+import java.util.List;
+import java.util.Map;
+
+import org.fkjava.cxf.ws.Cat;
+import org.fkjava.cxf.ws.HelloWorld;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class ListCatsAction extends ActionSupport {
+
+	private HelloWorld hw;//业务逻辑组件
+	private Map<String,Cat> cats;
+
+	public void setCats(Map<String,Cat> cats) {
+		this.cats = cats;
+	}
+
+	public void setHw(HelloWorld hw) {
+		this.hw = hw;
+	}
+	
+	public String execute() {
+		this.setCats(hw.getAllCats());
+		return SUCCESS;
+	}
+}

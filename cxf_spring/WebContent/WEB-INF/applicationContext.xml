@@ -18,23 +18,12 @@
 	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml"/>
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
 
-	<bean id="userService" class="org.fkjava.cxf.service.UserServiceImpl" />
-	<!-- implementor指定webservice的服务提供者。支持两种形式 
-		A.直接指定服务器提供者的类名
-		B.设置为容器中的一个bean.要在bean的id前加上#号
-	 -->
-	 <bean id="helloWorldWs" class="org.fkjava.cxf.ws.impl.HelloWorldWs"
-	 	p:us-ref="userService" />
-	<jaxws:endpoint 
-		implementor="#helloWorldWs" 
-		address="/fkjava" >
-		<!-- 添加了两个In拦截器 -->
-		<jaxws:inInterceptors>
-			<bean class="org.apache.cxf.interceptor.LoggingInInterceptor" />
-			<bean class="org.fkjava.cxf.ws.auth.AuthInterceptor" />
-		</jaxws:inInterceptors>
-		<!-- 添加了两个Out拦截器 -->
-		
-	</jaxws:endpoint>
+	<jaxws:client id="hw"
+		serviceClass="org.fkjava.cxf.ws.HelloWorld"
+		address="http://127.0.0.1:9999/fkjava">
+		<jaxws:outInterceptors>
+			<bean></bean>
+		</jaxws:outInterceptors>
+	</jaxws:client>
 
 </beans>
